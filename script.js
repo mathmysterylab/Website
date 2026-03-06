@@ -34,20 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* ──────────────────────────────────────
-     3. SUBSCRIBE FORM
-  ────────────────────────────────────── */
-  const subForm = document.getElementById('subscribeForm');
-  if (subForm) {
-    subForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name  = subForm.querySelector('[name="name"]').value.trim();
-      const email = subForm.querySelector('[name="email"]').value.trim();
-      if (!name || !email) { alert('Please fill in your name and email!'); return; }
-      alert('🎉 Thanks for subscribing, ' + name + '!');
-      subForm.reset();
-    });
-  }
 
   /* ──────────────────────────────────────
      4. CONTACT FORM
