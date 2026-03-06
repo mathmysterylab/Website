@@ -32,13 +32,14 @@ import { getFirestore, doc, setDoc, getDoc, updateDoc, increment, serverTimestam
 
 // ── PASTE YOUR FIREBASE CONFIG VALUES BELOW ──────────────────
 const firebaseConfig = {
-   apiKey: "AIzaSyCucFDrlujo9J2p5cYhxEBhlKe8m3yThoU",
-   authDomain: "mathmysterylab-bea8a.firebaseapp.com",
-   projectId: "mathmysterylab-bea8a",
-   storageBucket: "mathmysterylab-bea8a.firebasestorage.app",
-   messagingSenderId: "1064927435616",
-   appId: "1:1064927435616:web:94ab85d8da156ff946dc05"
- };
+  apiKey: "AIzaSyCucFDrlujo9J2p5cYhxEBhlKe8m3yThoU",
+  authDomain: "mathmysterylab-bea8a.firebaseapp.com",
+  projectId: "mathmysterylab-bea8a",
+  storageBucket: "mathmysterylab-bea8a.firebasestorage.app",
+  messagingSenderId: "1064927435616",
+  appId: "1:1064927435616:web:94ab85d8da156ff946dc05"
+};
+
 // ─────────────────────────────────────────────────────────────
 
 const app      = initializeApp(firebaseConfig);
