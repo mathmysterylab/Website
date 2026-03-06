@@ -33,7 +33,7 @@ import { getFirestore, doc, setDoc, getDoc, updateDoc, increment, serverTimestam
 // ── PASTE YOUR FIREBASE CONFIG VALUES BELOW ──────────────────
 const firebaseConfig = {
    apiKey: "AIzaSyCucFDrlujo9J2p5cYhxEBhlKe8m3yThoU",
-   authDomain: "mathmysterylab.org",
+   authDomain: "mathmysterylab-bea8a.firebaseapp.com",
    projectId: "mathmysterylab-bea8a",
    storageBucket: "mathmysterylab-bea8a.firebasestorage.app",
    messagingSenderId: "1064927435616",
