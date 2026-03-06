@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Dashboard | Math Mystery Lab</title>
+  <meta name="description" content="Track your math progress, scores and achievements at Math Mystery Lab." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Dashboard-specific styles ── */
+    .dash-hero {
+      background: linear-gradient(135deg, var(--primary), #9B59B6);
+      color: #fff;
+      padding: 40px 24px;
+    }
+    .dash-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .dash-avatar {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      border: 4px solid rgba(255,255,255,.5);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .dash-avatar-placeholder {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem;
+      flex-shrink: 0;
+    }
+    .dash-welcome h1 { font-family: var(--font-head); font-size: 1.9rem; }
+    .dash-welcome p  { opacity: .85; font-size: .95rem; margin-top: 4px; }
+
+    .dash-stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      max-width: 1100px;
+      margin: 28px auto 0;
+    }
+    .stat-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .stat-card .stat-icon { font-size: 1.8rem; margin-bottom: 8px; }
+    .stat-card .stat-val  { font-family: var(--font-head); font-size: 2rem; color: var(--primary); line-height: 1; }
+    .stat-card .stat-lbl  { font-size: .78rem; color: var(--text-mid); font-weight: 700; margin-top: 4px; }
+
+    /* XP Bar */
+    .xp-bar-wrap { background: var(--bg); border-radius: 30px; height: 12px; overflow: hidden; margin: 8px 0 4px; }
+    .xp-bar-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent-pink)); border-radius: 30px; transition: width .6s ease; }
+
+    /* Recent activity */
+    .activity-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    .activity-table th { text-align: left; padding: 10px 12px; background: var(--bg); color: var(--text-mid); font-weight: 800; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; }
+    .activity-table td { padding: 12px 12px; border-bottom: 1px solid #f0e8ff; vertical-align: middle; }
+    .activity-table tr:last-child td { border-bottom: none; }
+    .score-pill { display: inline-block; padding: 3px 12px; border-radius: 30px; font-weight: 800; font-size: .8rem; }
+    .score-great  { background: #e8f5e9; color: #2e7d32; }
+    .score-ok     { background: #fff3e0; color: #e65100; }
+    .score-low    { background: #fce4ec; color: #c62828; }
+
+    /* Recommended */
+    .rec-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: transform .2s;
+      cursor: pointer;
+    }
+    .rec-card:hover { transform: translateY(-3px); }
+    .rec-card .rec-icon { font-size: 2rem; flex-shrink: 0; }
+    .rec-card h4 { font-family: var(--font-head); font-size: 1.1rem; color: var(--primary); margin-bottom: 4px; }
+    .rec-card p  { font-size: .85rem; color: var(--text-mid); }
+    .rec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+
+    /* Achievement badges */
+    .badge-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 14px; }
+    .badge-item { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 12px; text-align: center; }
+    .badge-item .badge-icon { font-size: 2.2rem; margin-bottom: 8px; }
+    .badge-item h5 { font-family: var(--font-head); font-size: .95rem; color: var(--primary); margin-bottom: 3px; }
+    .badge-item p  { font-size: .72rem; color: var(--text-mid); }
+    .badge-locked  { opacity: .4; filter: grayscale(1); }
+
+    /* Logged out state */
+    .login-prompt {
+      text-align: center;
+      padding: 80px 24px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .login-prompt .big-icon { font-size: 5rem; margin-bottom: 20px; }
+    .login-prompt h2 { font-family: var(--font-head); font-size: 2rem; color: var(--primary); margin-bottom: 12px; }
+    .login-prompt p  { color: var(--text-mid); margin-bottom: 28px; }
+
+    /* Section card wrapper */
+    .dash-section {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .dash-section h3 {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .progress-topic { margin-bottom: 16px; }
+    .progress-topic-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; font-size: .88rem; font-weight: 700; }
+    .progress-bar-wrap { background: var(--bg); border-radius: 30px; height: 10px; overflow: hidden; }
+    .progress-bar-fill { height: 100%; border-radius: 30px; transition: width .6s ease; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">🔢 Math<span>Mystery</span>Lab</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Topics ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="arithmetic.html">➕ Arithmetic</a></li>
+            <li><a href="geometry.html">📐 Geometry</a></li>
+            <li><a href="algebra.html">🔣 Algebra</a></li>
+            <li><a href="statistics.html">📊 Statistics</a></li>
+            <li><a href="calculus.html">∫ Calculus</a></li>
+            <li><a href="trigonometry.html">📐 Trigonometry</a></li>
+            <li><a href="number-theory.html">🔢 Number Theory</a></li>
+          </ul>
+        </li>
+        <li><a href="games.html" class="btn-nav-cta">🎮 Play Games</a></li>
+        <li><a href="dashboard.html" class="active">My Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-auth" id="navAuth">
+        <button id="loginBtn">Sign In with Google</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== CONTENT — shown/hidden based on login ===== -->
+  <div id="loggedOutView">
+    <div class="login-prompt">
+      <div class="big-icon">🔐</div>
+      <h2>Sign In to See Your Dashboard</h2>
+      <p>Track your scores, earn XP, unlock badges, and see your progress across all topics — completely free!</p>
+      <button class="btn btn-orange" id="loginPromptBtn" style="font-size:1.1rem; padding:16px 36px;">
+        Sign In with Google 🚀
+      </button>
+      <p style="margin-top:20px; font-size:.82rem; color:var(--text-mid);">
+        No account needed — just use your existing Google account. Free forever.
+      </p>
+    </div>
+  </div>
+
+  <div id="loggedInView" style="display:none;">
+
+    <!-- HERO WELCOME -->
+    <div class="dash-hero">
+      <div class="dash-hero-inner">
+        <img src="" alt="Avatar" class="dash-avatar" id="dashAvatar" style="display:none;" />
+        <div class="dash-avatar-placeholder" id="dashAvatarPlaceholder">🧑‍🎓</div>
+        <div class="dash-welcome">
+          <h1>Welcome back, <span id="dashName">Learner</span>! 👋</h1>
+          <p id="dashEmail"></p>
+          <div style="margin-top:10px;">
+            <span id="planBadge" style="background:rgba(255,255,255,.2);padding:4px 14px;border-radius:30px;font-size:.8rem;font-weight:800;">🆓 Free Plan</span>
+          </div>
+        </div>
+        <div style="margin-left:auto;">
+          <div style="color:rgba(255,255,255,.7);font-size:.78rem;font-weight:700;margin-bottom:6px;">
+            Level <span id="xpLevel">1</span> &nbsp;·&nbsp; <span id="xpPoints">0</span> XP
+          </div>
+          <div class="xp-bar-wrap" style="width:200px;">
+            <div class="xp-bar-fill" id="xpBarFill" style="width:0%"></div>
+          </div>
+          <div style="color:rgba(255,255,255,.6);font-size:.72rem;margin-top:4px;"><span id="xpToNext">100</span> XP to next level</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS ROW -->
+    <section class="section" style="padding:28px 24px;">
+      <div class="dash-stats-row">
+        <div class="stat-card">
+          <div class="stat-icon">🎮</div>
+          <div class="stat-val" id="statGames">0</div>
+          <div class="stat-lbl">Games Played</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-val" id="statXP">0</div>
+          <div class="stat-lbl">Total XP</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🔥</div>
+          <div class="stat-val" id="statStreak">0</div>
+          <div class="stat-lbl">Day Streak</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏆</div>
+          <div class="stat-val" id="statBadges">0</div>
+          <div class="stat-lbl">Badges Earned</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📅</div>
+          <div class="stat-val" id="statDays">0</div>
+          <div class="stat-lbl">Days Learning</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN DASHBOARD GRID -->
+    <section class="section" style="padding-top:0;">
+      <div class="section-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+
+        <!-- Recent Activity -->
+        <div class="dash-section" style="grid-column:1/-1;">
+          <h3>📋 Recent Activity</h3>
+          <div id="recentActivity">
+            <div style="text-align:center;padding:30px;color:var(--text-mid);">
+              <div style="font-size:2.5rem;margin-bottom:10px;">🎮</div>
+              <p>No games played yet! <a href="games.html" style="color:var(--primary);font-weight:800;">Play your first game →</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topic Progress -->
+        <div class="dash-section">
+          <h3>📊 Topic Progress</h3>
+          <div id="topicProgress">
+            <div class="progress-topic">
+              <div class="progress-topic-head"><span>➕ Arithmetic</span><span style="color:var(--secondary);">0%</span></div>
+              <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%;background:var(--secondary);"></div></div>
+            </div>
+            <div class="progress-topic">
+              <div class="progress-topic-head"><span>📐 Geometry</span><span style="color:var(--accent-blue);">0%</span></div>
+              <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%;background:var(--accent-blue);"></div></div>
+            </div>
+            <div class="progress-topic">
+              <div class="progress-topic-head"><span>🔣 Algebra</span><span style="color:var(--accent-pink);">0%</span></div>
+              <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%;background:var(--accent-pink);"></div></div>
+            </div>
+            <div class="progress-topic">
+              <div class="progress-topic-head"><span>📊 Statistics</span><span style="color:var(--accent-green);">0%</span></div>
+              <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%;background:var(--accent-green);"></div></div>
+            </div>
+            <div class="progress-topic">
+              <div class="progress-topic-head"><span>∫ Calculus</span><span style="color:var(--primary);">0%</span></div>
+              <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%;background:var(--primary);"></div></div>
+            </div>
+            <p style="font-size:.78rem;color:var(--text-mid);margin-top:12px;">Play games to fill up your progress bars! 🚀</p>
+          </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="dash-section">
+          <h3>🏆 Achievements</h3>
+          <div class="badge-grid">
+            <div class="badge-item" id="badge-first">
+              <div class="badge-icon">🎮</div>
+              <h5>First Game!</h5>
+              <p>Play your first game</p>
+            </div>
+            <div class="badge-item badge-locked" id="badge-streak3">
+              <div class="badge-icon">🔥</div>
+              <h5>On Fire!</h5>
+              <p>3-day streak</p>
+            </div>
+            <div class="badge-item badge-locked" id="badge-perfect">
+              <div class="badge-icon">⭐</div>
+              <h5>Perfectionist</h5>
+              <p>Score 100% on a quiz</p>
+            </div>
+            <div class="badge-item badge-locked" id="badge-10games">
+              <div class="badge-icon">🕹️</div>
+              <h5>Gamer</h5>
+              <p>Play 10 games</p>
+            </div>
+            <div class="badge-item badge-locked" id="badge-speed">
+              <div class="badge-icon">⚡</div>
+              <h5>Speed Demon</h5>
+              <p>Score 15 in Speed Round</p>
+            </div>
+            <div class="badge-item badge-locked" id="badge-allTopics">
+              <div class="badge-icon">🌟</div>
+              <h5>Explorer</h5>
+              <p>Play all 7 topics</p>
+            </div>
+            <div class="badge-item badge-locked" id="badge-100xp">
+              <div class="badge-icon">💎</div>
+              <h5>XP Hunter</h5>
+              <p>Earn 100 XP</p>
+            </div>
+            <div class="badge-item badge-locked" id="badge-university">
+              <div class="badge-icon">🎓</div>
+              <h5>Scholar</h5>
+              <p>Complete a University quiz</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Recommended Next -->
+      <div class="dash-section">
+        <h3>🎯 Recommended For You</h3>
+        <div class="rec-grid">
+          <a href="games.html" class="rec-card">
+            <div class="rec-icon">➕</div>
+            <div>
+              <h4>Arithmetic Beginner Quiz</h4>
+              <p>A great starting point! Test your basic number skills.</p>
+              <span class="level-badge level-beginner" style="margin-top:8px;display:inline-block;">🌱 Beginner</span>
+            </div>
+          </a>
+          <a href="games.html" class="rec-card">
+            <div class="rec-icon">⚡</div>
+            <div>
+              <h4>Speed Round Challenge</h4>
+              <p>How many can you answer in 30 seconds? Test yourself!</p>
+              <span class="level-badge level-elementary" style="margin-top:8px;display:inline-block;">📚 Elementary</span>
+            </div>
+          </a>
+          <a href="games.html" class="rec-card">
+            <div class="rec-icon">🎯</div>
+            <div>
+              <h4>Match It! — Statistics</h4>
+              <p>Drag and match mean, median, mode and range.</p>
+              <span class="level-badge level-beginner" style="margin-top:8px;display:inline-block;">🌱 Beginner</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-logo">🔢 Math<span>Mystery</span>Lab</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="arithmetic.html">Arithmetic</a>
+      <a href="algebra.html">Algebra</a>
+      <a href="geometry.html">Geometry</a>
+      <a href="statistics.html">Statistics</a>
+      <a href="calculus.html">Calculus</a>
+      <a href="games.html">Games</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="https://youtube.com/@MathMystery_Lab" target="_blank">▶ YouTube</a>
+      <a href="https://facebook.com/profile.php?id=61583882010090" target="_blank">📘 Facebook</a>
+      <a href="https://linkedin.com/company/math-mystery-lab" target="_blank">💼 LinkedIn</a>
+      <a href="https://tiktok.com/@mathmysterylab" target="_blank">🎵 TikTok</a>
+    </div>
+    <p class="footer-copy">© 2025 Math Mystery Lab. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module">
+    const loggedOut = document.getElementById('loggedOutView');
+    const loggedIn  = document.getElementById('loggedInView');
+
+    function showLoggedOut() {
+      loggedOut.style.display = 'block';
+      loggedIn.style.display  = 'none';
+    }
+    function showLoggedIn(user, profile) {
+      loggedOut.style.display = 'none';
+      loggedIn.style.display  = 'block';
+
+      // Avatar
+      if (user.photoURL) {
+        document.getElementById('dashAvatar').src = user.photoURL;
+        document.getElementById('dashAvatar').style.display = 'block';
+        document.getElementById('dashAvatarPlaceholder').style.display = 'none';
+      }
+
+      // Name & email
+      document.getElementById('dashName').textContent  = user.displayName ? user.displayName.split(' ')[0] : 'Learner';
+      document.getElementById('dashEmail').textContent = user.email || '';
+
+      if (profile) {
+        const xp       = profile.xp || 0;
+        const games    = profile.gamesPlayed || 0;
+        const streak   = profile.streak || 0;
+        const level    = Math.floor(xp / 100) + 1;
+        const xpInLvl  = xp % 100;
+        const joinDate = profile.joinedAt?.toDate?.() || new Date();
+        const daysSince= Math.max(1, Math.floor((Date.now() - joinDate) / 86400000));
+
+        document.getElementById('statGames').textContent  = games;
+        document.getElementById('statXP').textContent     = xp;
+        document.getElementById('statStreak').textContent = streak;
+        document.getElementById('statDays').textContent   = daysSince;
+        document.getElementById('xpLevel').textContent    = level;
+        document.getElementById('xpPoints').textContent   = xp;
+        document.getElementById('xpBarFill').style.width  = xpInLvl + '%';
+        document.getElementById('xpToNext').textContent   = (100 - xpInLvl);
+
+        // Badges
+        let badgeCount = 0;
+        if (games >= 1)  { document.getElementById('badge-first').classList.remove('badge-locked'); badgeCount++; }
+        if (games >= 10) { document.getElementById('badge-10games').classList.remove('badge-locked'); badgeCount++; }
+        if (streak >= 3) { document.getElementById('badge-streak3').classList.remove('badge-locked'); badgeCount++; }
+        if (xp >= 100)   { document.getElementById('badge-100xp').classList.remove('badge-locked'); badgeCount++; }
+        document.getElementById('statBadges').textContent = badgeCount;
+
+        // Plan badge
+        if (profile.plan === 'pro') {
+          document.getElementById('planBadge').textContent = '⭐ Pro Plan';
+          document.getElementById('planBadge').style.background = 'var(--yellow)';
+          document.getElementById('planBadge').style.color = '#333';
+        }
+      }
+    }
+
+    try {
+      const { loginWithGoogle, logout, onUserChange, getUserProfile } = await import('./firebase-config.js');
+
+      // Nav auth
+      const navAuth = document.getElementById('navAuth');
+      onUserChange(async user => {
+        if (user) {
+          navAuth.innerHTML = `
+            <a href="dashboard.html" style="display:flex;align-items:center;gap:8px;">
+              <img src="${user.photoURL}" class="user-avatar" alt="" />
+              <span class="user-name">${user.displayName.split(' ')[0]}</span>
+            </a>
+            <button id="logoutBtn">Sign Out</button>`;
+          document.getElementById('logoutBtn').addEventListener('click', logout);
+
+          const profile = await getUserProfile(user.uid);
+          showLoggedIn(user, profile);
+        } else {
+          navAuth.innerHTML = `<button id="loginBtn">Sign In with Google</button>`;
+          document.getElementById('loginBtn').addEventListener('click', loginWithGoogle);
+          showLoggedOut();
+        }
+      });
+
+      // Login buttons
+      document.getElementById('loginPromptBtn')?.addEventListener('click', loginWithGoogle);
+      document.getElementById('loginBtn')?.addEventListener('click', loginWithGoogle);
+
+    } catch(e) {
+      console.warn('Firebase not configured:', e);
+      // Show a demo version when Firebase isn't set up yet
+      showLoggedIn(
+        { displayName: 'Demo User', email: 'demo@example.com', photoURL: null },
+        { xp: 0, gamesPlayed: 0, streak: 0, plan: 'free', joinedAt: null }
+      );
+      document.getElementById('loginPromptBtn')?.addEventListener('click', () =>
+        alert('Firebase login not configured yet. See firebase-config.js for setup instructions.')
+      );
+      document.getElementById('loginBtn')?.addEventListener('click', () =>
+        alert('Firebase login not configured yet. See firebase-config.js for setup instructions.')
+      );
+    }
+  </script>
+</body>
+</html>

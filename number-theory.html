@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Theory | Math Mystery Lab</title>
+  <meta name="description" content="Learn Number Theory with Math Mystery Lab — primes, GCD, modular math!" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">🔢 Math<span>Mystery</span>Lab</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Topics ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="arithmetic.html">➕ Arithmetic</a></li>
+            <li><a href="geometry.html">📐 Geometry</a></li>
+            <li><a href="algebra.html">🔣 Algebra</a></li>
+            <li><a href="statistics.html">📊 Statistics</a></li>
+            <li><a href="calculus.html">∫ Calculus</a></li>
+            <li><a href="trigonometry.html">📐 Trigonometry</a></li>
+            <li><a href="number-theory.html">🔢 Number Theory</a></li>
+          </ul>
+        </li>
+        <li><a href="games.html" class="btn-nav-cta">🎮 Play Games</a></li>
+        <li><a href="dashboard.html"> My Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-auth" id="navAuth">
+        <button id="loginBtn">Sign In with Google</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <header class="page-header" style="background:linear-gradient(135deg,#E91E63,#9B59B6);">
+    <h1>🔢 Number Theory</h1>
+    <p>Primes, GCD, LCM, modular arithmetic — the deep side of numbers!</p>
+  </header>
+  <section class="section">
+    <div class="section-inner">
+      <div class="level-tabs-wrapper">
+        <div class="level-tabs">
+          <button class="level-tab tab-intermediate active" data-level="intermediate">🎓 Intermediate</button>
+          <button class="level-tab tab-advanced"            data-level="advanced">🚀 Advanced</button>
+          <button class="level-tab tab-university"          data-level="university">🎓 University</button>
+        </div>
+    <div class="level-panel " id="panel-intermediate">
+      <div class="lessons-grid">
+      <div class="lesson-card">
+        <div class="lesson-video" style="background:linear-gradient(135deg,#FF6B35,#FFD700);">🔢</div>
+        <div class="lesson-body">
+          <span class="level-badge level-intermediate" style="margin-bottom:8px;display:inline-block;">Intermediate</span>
+          <h3>Prime Numbers</h3>
+          <p>What makes a number prime?</p>
+          <div class="lesson-actions"><button class="btn btn-purple btn-sm" data-game="quiz" data-topic="number" data-level="intermediate">Quiz</button><button class="btn btn-orange btn-sm" data-game="timed" data-topic="number" data-level="intermediate">⚡ Speed</button></div>
+        </div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-video" style="background:linear-gradient(135deg,#FF6B35,#FFD700);">➗</div>
+        <div class="lesson-body">
+          <span class="level-badge level-intermediate" style="margin-bottom:8px;display:inline-block;">Intermediate</span>
+          <h3>Divisibility Rules</h3>
+          <p>Quick tricks to check divisibility.</p>
+          <div class="lesson-actions"><button class="btn btn-purple btn-sm" data-game="quiz" data-topic="number" data-level="intermediate">Quiz</button><button class="btn btn-orange btn-sm" data-game="timed" data-topic="number" data-level="intermediate">⚡ Speed</button></div>
+        </div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-video" style="background:linear-gradient(135deg,#FF6B35,#FFD700);">🔗</div>
+        <div class="lesson-body">
+          <span class="level-badge level-intermediate" style="margin-bottom:8px;display:inline-block;">Intermediate</span>
+          <h3>GCD and LCM</h3>
+          <p>Greatest common divisor and lowest common multiple.</p>
+          <span class="badge">Coming Soon</span>
+        </div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-video" style="background:linear-gradient(135deg,#FF6B35,#FFD700);">🔄</div>
+        <div class="lesson-body">
+          <span class="level-badge level-intermediate" style="margin-bottom:8px;display:inline-block;">Intermediate</span>
+          <h3>Modular Arithmetic</h3>
+          <p>Clock-style arithmetic explained.</p>
+          <span class="badge">Coming Soon</span>
+        </div>
+      </div>
+      </div>
+      <div style="background:var(--white);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);margin-top:28px;">
+        <h3 style="font-family:var(--font-head);color:var(--primary);margin-bottom:16px;">🎮 Practice Games — Intermediate Level</h3>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="number" data-level="intermediate">🧠 Quiz</button>
+          <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="number" data-level="intermediate">✏️ Fill in Blank</button>
+          <button class="btn btn-sm" style="background:var(--accent-blue);color:#fff;" data-game="drag" data-topic="number" data-level="intermediate">🎯 Match It</button>
+          <button class="btn btn-sm" style="background:var(--accent-green);color:#fff;" data-game="timed" data-topic="number" data-level="intermediate">⚡ Speed Round</button>
+        </div>
+      </div>
+    </div>
+    <div class="level-panel " id="panel-advanced">
+      <div class="lessons-grid">
+      <div class="lesson-card">
+        <div class="lesson-video" style="background:linear-gradient(135deg,#9B59B6,#FF4F9A);">📐</div>
+        <div class="lesson-body">
+          <span class="level-badge level-advanced" style="margin-bottom:8px;display:inline-block;">Advanced</span>
+          <h3>Number Bases</h3>
+          <p>Binary, octal, hexadecimal.</p>
+          <span class="badge">Coming Soon</span>
+        </div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-video" style="background:linear-gradient(135deg,#9B59B6,#FF4F9A);">🎲</div>
+        <div class="lesson-body">
+          <span class="level-badge level-advanced" style="margin-bottom:8px;display:inline-block;">Advanced</span>
+          <h3>Prime Factorisation</h3>
+          <p>Break any number into prime factors.</p>
+          <span class="badge">Coming Soon</span>
+        </div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-video" style="background:linear-gradient(135deg,#9B59B6,#FF4F9A);">🔢</div>
+        <div class="lesson-body">
+          <span class="level-badge level-advanced" style="margin-bottom:8px;display:inline-block;">Advanced</span>
+          <h3>Diophantine Equations</h3>
+          <p>Integer solutions to equations.</p>
+          <span class="badge">Coming Soon</span>
+        </div>
+      </div>
+      </div>
+      <div style="background:var(--white);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);margin-top:28px;">
+        <h3 style="font-family:var(--font-head);color:var(--primary);margin-bottom:16px;">🎮 Practice Games — Advanced Level</h3>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="number" data-level="advanced">🧠 Quiz</button>
+          <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="number" data-level="advanced">✏️ Fill in Blank</button>
+          <button class="btn btn-sm" style="background:var(--accent-blue);color:#fff;" data-game="drag" data-topic="number" data-level="advanced">🎯 Match It</button>
+          <button class="btn btn-sm" style="background:var(--accent-green);color:#fff;" data-game="timed" data-topic="number" data-level="advanced">⚡ Speed Round</button>
+        </div>
+      </div>
+    </div>
+    <div class="level-panel " id="panel-university">
+      <div class="lessons-grid">
+      <div class="lesson-card">
+        <div class="lesson-video" style="background:linear-gradient(135deg,#1A1A2E,#6C3FC5);">🎓</div>
+        <div class="lesson-body">
+          <span class="level-badge level-university" style="margin-bottom:8px;display:inline-block;">University</span>
+          <h3>Fermat's Little Theorem</h3>
+          <p>A powerful result about primes.</p>
+          <span class="badge">Coming Soon</span>
+        </div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-video" style="background:linear-gradient(135deg,#1A1A2E,#6C3FC5);">📐</div>
+        <div class="lesson-body">
+          <span class="level-badge level-university" style="margin-bottom:8px;display:inline-block;">University</span>
+          <h3>Euler's Totient Function</h3>
+          <p>Count integers coprime to n.</p>
+          <span class="badge">Coming Soon</span>
+        </div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-video" style="background:linear-gradient(135deg,#1A1A2E,#6C3FC5);">🔢</div>
+        <div class="lesson-body">
+          <span class="level-badge level-university" style="margin-bottom:8px;display:inline-block;">University</span>
+          <h3>RSA Cryptography</h3>
+          <p>How primes power internet security.</p>
+          <span class="badge">Coming Soon</span>
+        </div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-video" style="background:linear-gradient(135deg,#1A1A2E,#6C3FC5);">∞</div>
+        <div class="lesson-body">
+          <span class="level-badge level-university" style="margin-bottom:8px;display:inline-block;">University</span>
+          <h3>Riemann Hypothesis</h3>
+          <p>The most famous unsolved problem!</p>
+          <span class="badge">Coming Soon</span>
+        </div>
+      </div>
+      </div>
+      <div style="background:var(--white);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);margin-top:28px;">
+        <h3 style="font-family:var(--font-head);color:var(--primary);margin-bottom:16px;">🎮 Practice Games — University Level</h3>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="number" data-level="university">🧠 Quiz</button>
+          <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="number" data-level="university">✏️ Fill in Blank</button>
+          <button class="btn btn-sm" style="background:var(--accent-blue);color:#fff;" data-game="drag" data-topic="number" data-level="university">🎯 Match It</button>
+          <button class="btn btn-sm" style="background:var(--accent-green);color:#fff;" data-game="timed" data-topic="number" data-level="university">⚡ Speed Round</button>
+        </div>
+      </div>
+    </div>
+
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-logo">🔢 Math<span>Mystery</span>Lab</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="arithmetic.html">Arithmetic</a>
+      <a href="algebra.html">Algebra</a>
+      <a href="geometry.html">Geometry</a>
+      <a href="statistics.html">Statistics</a>
+      <a href="calculus.html">Calculus</a>
+      <a href="trigonometry.html">Trigonometry</a>
+      <a href="number-theory.html">Number Theory</a>
+      <a href="games.html">🎮 Games</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="https://youtube.com/@MathMystery_Lab" target="_blank">▶ YouTube</a>
+      <a href="https://facebook.com/profile.php?id=61583882010090" target="_blank">📘 Facebook</a>
+      <a href="https://linkedin.com/company/math-mystery-lab" target="_blank">💼 LinkedIn</a>
+      <a href="https://tiktok.com/@mathmysterylab" target="_blank">🎵 TikTok</a>
+    </div>
+    <p class="footer-copy">© 2025 Math Mystery Lab. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+  <script type="module">
+    try {
+      const { loginWithGoogle, logout, onUserChange } = await import('./firebase-config.js');
+      const navAuth = document.getElementById('navAuth');
+      onUserChange(user => {
+        if (user) {
+          navAuth.innerHTML = `<a href="dashboard.html" style="display:flex;align-items:center;gap:8px;"><img src="${user.photoURL}" class="user-avatar" alt=""/><span class="user-name">${user.displayName.split(' ')[0]}</span></a><button id="logoutBtn">Sign Out</button>`;
+          document.getElementById('logoutBtn').addEventListener('click', logout);
+        } else {
+          navAuth.innerHTML = `<button id="loginBtn">Sign In with Google</button>`;
+          document.getElementById('loginBtn').addEventListener('click', loginWithGoogle);
+        }
+      });
+      const lb = document.getElementById('loginBtn');
+      if(lb) lb.addEventListener('click', loginWithGoogle);
+    } catch(e) {
+      const lb = document.getElementById('loginBtn');
+      if(lb) lb.addEventListener('click', ()=> alert('Firebase login not yet configured. See firebase-config.js for instructions.'));
+    }
+  </script>
+</body>
+</html>
