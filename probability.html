@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Probability | Math Mystery Lab</title>
+  <meta name="description" content="Learn Probability at Math Mystery Lab — chance, likelihood, combinations and more. Beginner to University level." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">🔢 Math<span>Mystery</span>Lab</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Topics ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="arithmetic.html">➕ Arithmetic</a></li>
+            <li><a href="geometry.html">📐 Geometry</a></li>
+            <li><a href="algebra.html">🔣 Algebra</a></li>
+            <li><a href="statistics.html">📊 Statistics</a></li>
+            <li><a href="probability.html">🎲 Probability</a></li>
+            <li><a href="trigonometry.html">📐 Trigonometry</a></li>
+            <li><a href="calculus.html">∫ Calculus</a></li>
+            <li><a href="number-theory.html">🔢 Number Theory</a></li>
+          </ul>
+        </li>
+        <li><a href="games.html" class="btn-nav-cta">🎮 Play Games</a></li>
+        <li><a href="dashboard.html">My Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-auth" id="navAuth">
+        <button id="loginBtn">Sign In with Google</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="page-header" style="background: linear-gradient(135deg, #6C3FC5 0%, #4a2a9e 100%); padding: 80px 20px;">
+    <h1>🎲 Probability</h1>
+    <p>Chance, likelihood, combinations and the mathematics of uncertainty</p>
+  </header>
+
+  <section class="section">
+    <div class="section-inner">
+
+      <div class="level-tabs">
+        <button class="level-tab active" data-level="beginner">🌱 Beginner</button>
+        <button class="level-tab" data-level="elementary">📚 Elementary</button>
+        <button class="level-tab" data-level="intermediate">🎓 Intermediate</button>
+        <button class="level-tab" data-level="advanced">🚀 Advanced</button>
+        <button class="level-tab" data-level="university">🎓 University</button>
+      </div>
+
+      <!-- BEGINNER -->
+      <div class="level-content active" id="level-beginner">
+        <h2 class="level-heading">🌱 Beginner Probability</h2>
+        <p class="level-desc">Introduction to chance — likely, unlikely, certain and impossible events.</p>
+        <div class="topic-cards">
+          <div class="topic-card">
+            <div class="card-icon">🎯</div>
+            <h3>What is Probability?</h3>
+            <p>Understanding the chance of something happening.</p>
+            <a href="games.html?topic=probability&level=beginner" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">🪙</div>
+            <h3>Certain & Impossible</h3>
+            <p>Events that always happen, never happen, or might happen.</p>
+            <a href="games.html?topic=probability&level=beginner" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">🎲</div>
+            <h3>Likely & Unlikely</h3>
+            <p>Comparing how probable different events are.</p>
+            <a href="games.html?topic=probability&level=beginner" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">🎡</div>
+            <h3>Simple Experiments</h3>
+            <p>Coin flips, dice rolls and spinners.</p>
+            <a href="games.html?topic=probability&level=beginner" class="btn btn-purple">Practice</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ELEMENTARY -->
+      <div class="level-content" id="level-elementary">
+        <h2 class="level-heading">📚 Elementary Probability</h2>
+        <p class="level-desc">Fractions and ratios to describe probability. Simple sample spaces.</p>
+        <div class="topic-cards">
+          <div class="topic-card">
+            <div class="card-icon">½</div>
+            <h3>Probability as a Fraction</h3>
+            <p>Writing probability as favourable outcomes over total outcomes.</p>
+            <a href="games.html?topic=probability&level=elementary" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">🎲</div>
+            <h3>Sample Space</h3>
+            <p>Listing all possible outcomes of an experiment.</p>
+            <a href="games.html?topic=probability&level=elementary" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">📊</div>
+            <h3>Experimental Probability</h3>
+            <p>Running experiments and recording results to estimate probability.</p>
+            <a href="games.html?topic=probability&level=elementary" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">🃏</div>
+            <h3>Equally Likely Outcomes</h3>
+            <p>Fairness and equally likely events with coins and dice.</p>
+            <a href="games.html?topic=probability&level=elementary" class="btn btn-purple">Practice</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERMEDIATE -->
+      <div class="level-content" id="level-intermediate">
+        <h2 class="level-heading">🎓 Intermediate Probability</h2>
+        <p class="level-desc">Combined events, tree diagrams, and complementary probability.</p>
+        <div class="topic-cards">
+          <div class="topic-card">
+            <div class="card-icon">🌳</div>
+            <h3>Tree Diagrams</h3>
+            <p>Using tree diagrams to list outcomes of combined events.</p>
+            <a href="games.html?topic=probability&level=intermediate" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">➕</div>
+            <h3>Addition Rule</h3>
+            <p>P(A or B) for mutually exclusive events.</p>
+            <a href="games.html?topic=probability&level=intermediate" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">✖️</div>
+            <h3>Multiplication Rule</h3>
+            <p>P(A and B) for independent events.</p>
+            <a href="games.html?topic=probability&level=intermediate" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">🔄</div>
+            <h3>Complementary Events</h3>
+            <p>P(not A) = 1 − P(A) and using complements.</p>
+            <a href="games.html?topic=probability&level=intermediate" class="btn btn-purple">Practice</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADVANCED -->
+      <div class="level-content" id="level-advanced">
+        <h2 class="level-heading">🚀 Advanced Probability</h2>
+        <p class="level-desc">Conditional probability, Bayes' theorem, permutations and combinations.</p>
+        <div class="topic-cards">
+          <div class="topic-card">
+            <div class="card-icon">🔗</div>
+            <h3>Conditional Probability</h3>
+            <p>P(A|B) — probability of A given that B has occurred.</p>
+            <a href="games.html?topic=probability&level=advanced" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">📐</div>
+            <h3>Bayes' Theorem</h3>
+            <p>Updating probabilities based on new evidence.</p>
+            <a href="games.html?topic=probability&level=advanced" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">🔢</div>
+            <h3>Permutations</h3>
+            <p>Counting ordered arrangements — nPr.</p>
+            <a href="games.html?topic=probability&level=advanced" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">🎯</div>
+            <h3>Combinations</h3>
+            <p>Counting unordered selections — nCr.</p>
+            <a href="games.html?topic=probability&level=advanced" class="btn btn-purple">Practice</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- UNIVERSITY -->
+      <div class="level-content" id="level-university">
+        <h2 class="level-heading">🎓 University Probability</h2>
+        <p class="level-desc">Probability distributions, random variables, and stochastic processes.</p>
+        <div class="topic-cards">
+          <div class="topic-card">
+            <div class="card-icon">📈</div>
+            <h3>Random Variables</h3>
+            <p>Discrete and continuous random variables and their distributions.</p>
+            <a href="games.html?topic=probability&level=university" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">🔔</div>
+            <h3>Normal Distribution</h3>
+            <p>The bell curve, z-scores and standard normal tables.</p>
+            <a href="games.html?topic=probability&level=university" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">📊</div>
+            <h3>Binomial Distribution</h3>
+            <p>B(n,p) — repeated independent trials with two outcomes.</p>
+            <a href="games.html?topic=probability&level=university" class="btn btn-purple">Practice</a>
+          </div>
+          <div class="topic-card">
+            <div class="card-icon">♾️</div>
+            <h3>Expected Value</h3>
+            <p>E(X) — the long-run average of a random variable.</p>
+            <a href="games.html?topic=probability&level=university" class="btn btn-purple">Practice</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GAMES CTA -->
+  <section class="section" style="background: linear-gradient(135deg, #6C3FC5, #4a2a9e); text-align:center; padding: 60px 20px;">
+    <h2 style="color:white; margin-bottom:12px;">Ready to Practice? 🎲</h2>
+    <p style="color:rgba(255,255,255,0.85); margin-bottom:28px; font-size:18px;">Test your probability skills with interactive games!</p>
+    <a href="games.html?topic=probability" class="btn btn-orange" style="font-size:18px; padding:14px 36px;">🎮 Play Probability Games</a>
+  </section>
+
+  <footer>
+    <div class="footer-logo">🔢 Math<span>Mystery</span>Lab</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="arithmetic.html">Arithmetic</a>
+      <a href="algebra.html">Algebra</a>
+      <a href="geometry.html">Geometry</a>
+      <a href="statistics.html">Statistics</a>
+      <a href="probability.html">Probability</a>
+      <a href="calculus.html">Calculus</a>
+      <a href="trigonometry.html">Trigonometry</a>
+      <a href="number-theory.html">Number Theory</a>
+      <a href="games.html">🎮 Games</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="https://youtube.com/@MathMystery_Lab" target="_blank">▶ YouTube</a>
+      <a href="https://facebook.com/profile.php?id=61583882010090" target="_blank">📘 Facebook</a>
+      <a href="https://linkedin.com/company/math-mystery-lab" target="_blank">💼 LinkedIn</a>
+      <a href="https://tiktok.com/@mathmysterylab" target="_blank">🎵 TikTok</a>
+    </div>
+    <p class="footer-copy">© 2025 Math Mystery Lab. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module">
+    try {
+      const { loginWithGoogle, logout, onUserChange } = await import('./firebase-config.js');
+      const navAuth = document.getElementById('navAuth');
+      onUserChange(user => {
+        if (user) {
+          navAuth.innerHTML = `<a href="dashboard.html" style="display:flex;align-items:center;gap:8px;"><img src="${user.photoURL}" class="user-avatar" alt=""/><span class="user-name">${user.displayName.split(' ')[0]}</span></a><button id="logoutBtn">Sign Out</button>`;
+          document.getElementById('logoutBtn').addEventListener('click', logout);
+        } else {
+          navAuth.innerHTML = `<button id="loginBtn">Sign In with Google</button>`;
+          document.getElementById('loginBtn').addEventListener('click', loginWithGoogle);
+        }
+      });
+    } catch(e) {
+      document.getElementById('loginBtn')?.addEventListener('click', () => alert('Firebase not configured yet.'));
+    }
+  </script>
+
+  <script>
+    // Level tabs
+    document.querySelectorAll('.level-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.level-content').forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('level-' + tab.dataset.level).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
