@@ -24,11 +24,11 @@
   11. Save this file. You're done!
    ============================================================ */
 
-import { initializeApp }       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { initializeApp }       from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged }
-                                from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+                                from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 import { getFirestore, doc, setDoc, getDoc, updateDoc, increment, serverTimestamp }
-                                from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+                                from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
 
 // ── PASTE YOUR FIREBASE CONFIG VALUES BELOW ──────────────────
 const firebaseConfig = {
