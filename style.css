@@ -115,7 +115,7 @@ ul   { list-style: none; }
   font-size: .86rem;
 }
 .dropdown-menu a:hover { background: var(--bg); color: var(--primary); }
-.dropdown:hover .dropdown-menu { display: block; }
+.dropdown-menu.open { display: block; }
 
 /* Auth buttons */
 .nav-auth {
