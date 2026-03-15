@@ -392,6 +392,28 @@ ul   { list-style: none; }
 .level-desc    { color:var(--text-mid); margin-bottom:20px; }
 
 /* ═══════════════════════════════════
+   GAMES BAR (on topic pages)
+═══════════════════════════════════ */
+.games-bar {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.games-bar h3 {
+  font-family: var(--font-head);
+  color: var(--primary);
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.games-bar-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ═══════════════════════════════════
    LESSON / VIDEO CARDS
 ═══════════════════════════════════ */
 .lessons-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:22px; }
