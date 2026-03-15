@@ -21,7 +21,7 @@
             <li><a href="geometry.html">📐 Geometry</a></li>
             <li><a href="algebra.html">🔣 Algebra</a></li>
             <li><a href="statistics.html">📊 Statistics</a></li>
-            <li><a href="probability.html">🎲 Probability</a></li>
+            <li><a href="probability.html" class="active">🎲 Probability</a></li>
             <li><a href="trigonometry.html">📐 Trigonometry</a></li>
             <li><a href="calculus.html">∫ Calculus</a></li>
             <li><a href="number-theory.html">🔢 Number Theory</a></li>
@@ -41,9 +41,9 @@
     </div>
   </nav>
 
-  <header class="page-header" style="background: linear-gradient(135deg, #6C3FC5 0%, #4a2a9e 100%); padding: 80px 20px;">
+  <header class="page-header" style="background: linear-gradient(135deg, #FF4F9A, #c0392b);">
     <h1>🎲 Probability</h1>
-    <p>Chance, likelihood, combinations and the mathematics of uncertainty</p>
+    <p>Chance, likelihood, combinations and the mathematics of uncertainty!</p>
   </header>
 
   <section class="section">
@@ -58,161 +58,294 @@
       </div>
 
       <!-- BEGINNER -->
-      <div class="level-content active" id="level-beginner">
-        <h2 class="level-heading">🌱 Beginner Probability</h2>
-        <p class="level-desc">Introduction to chance — likely, unlikely, certain and impossible events.</p>
-        <div class="topic-cards">
-          <div class="topic-card">
-            <div class="card-icon">🎯</div>
-            <h3>What is Probability?</h3>
-            <p>Understanding the chance of something happening.</p>
-            <a href="games.html?topic=probability&level=beginner" class="btn btn-purple">Practice</a>
+      <div class="level-panel active" id="panel-beginner">
+        <div class="lessons-grid">
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#FF4F9A,#FF6B35);">🎯</div>
+            <div class="lesson-body">
+              <span class="level-badge level-beginner" style="margin-bottom:8px;display:inline-block;">Beginner</span>
+              <h3>What is Probability?</h3>
+              <p>Understanding the chance of something happening.</p>
+              <div class="lesson-actions">
+                <button class="btn btn-purple btn-sm" data-game="quiz"  data-topic="probability" data-level="beginner">🧠 Quiz</button>
+                <button class="btn btn-orange btn-sm" data-game="drag"  data-topic="probability" data-level="beginner">🎯 Match</button>
+              </div>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">🪙</div>
-            <h3>Certain & Impossible</h3>
-            <p>Events that always happen, never happen, or might happen.</p>
-            <a href="games.html?topic=probability&level=beginner" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#FF4F9A,#FF6B35);">🪙</div>
+            <div class="lesson-body">
+              <span class="level-badge level-beginner" style="margin-bottom:8px;display:inline-block;">Beginner</span>
+              <h3>Certain & Impossible</h3>
+              <p>Events that always happen, never happen, or might happen.</p>
+              <div class="lesson-actions">
+                <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="probability" data-level="beginner">🧠 Quiz</button>
+                <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="probability" data-level="beginner">✏️ Fill-in</button>
+              </div>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">🎲</div>
-            <h3>Likely & Unlikely</h3>
-            <p>Comparing how probable different events are.</p>
-            <a href="games.html?topic=probability&level=beginner" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#FF4F9A,#FF6B35);">🎲</div>
+            <div class="lesson-body">
+              <span class="level-badge level-beginner" style="margin-bottom:8px;display:inline-block;">Beginner</span>
+              <h3>Likely & Unlikely</h3>
+              <p>Comparing how probable different events are.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">🎡</div>
-            <h3>Simple Experiments</h3>
-            <p>Coin flips, dice rolls and spinners.</p>
-            <a href="games.html?topic=probability&level=beginner" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#FF4F9A,#FF6B35);">🎡</div>
+            <div class="lesson-body">
+              <span class="level-badge level-beginner" style="margin-bottom:8px;display:inline-block;">Beginner</span>
+              <h3>Simple Experiments</h3>
+              <p>Coin flips, dice rolls and spinners.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+        <div class="games-bar">
+          <h3>🎮 Practice Games — Beginner</h3>
+          <div class="games-bar-btns">
+            <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="probability" data-level="beginner">🧠 Quiz</button>
+            <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="probability" data-level="beginner">✏️ Fill in Blank</button>
+            <button class="btn btn-sm" style="background:var(--accent-blue);color:#fff;"  data-game="drag"  data-topic="probability" data-level="beginner">🎯 Match It</button>
+            <button class="btn btn-sm" style="background:var(--accent-green);color:#fff;" data-game="timed" data-topic="probability" data-level="beginner">⚡ Speed Round</button>
           </div>
         </div>
       </div>
 
       <!-- ELEMENTARY -->
-      <div class="level-content" id="level-elementary">
-        <h2 class="level-heading">📚 Elementary Probability</h2>
-        <p class="level-desc">Fractions and ratios to describe probability. Simple sample spaces.</p>
-        <div class="topic-cards">
-          <div class="topic-card">
-            <div class="card-icon">½</div>
-            <h3>Probability as a Fraction</h3>
-            <p>Writing probability as favourable outcomes over total outcomes.</p>
-            <a href="games.html?topic=probability&level=elementary" class="btn btn-purple">Practice</a>
+      <div class="level-panel" id="panel-elementary">
+        <div class="lessons-grid">
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#3AB0FF,#6C3FC5);">½</div>
+            <div class="lesson-body">
+              <span class="level-badge level-elementary" style="margin-bottom:8px;display:inline-block;">Elementary</span>
+              <h3>Probability as a Fraction</h3>
+              <p>Writing probability as favourable outcomes over total outcomes.</p>
+              <div class="lesson-actions">
+                <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="probability" data-level="elementary">🧠 Quiz</button>
+                <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="probability" data-level="elementary">✏️ Fill-in</button>
+              </div>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">🎲</div>
-            <h3>Sample Space</h3>
-            <p>Listing all possible outcomes of an experiment.</p>
-            <a href="games.html?topic=probability&level=elementary" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#3AB0FF,#6C3FC5);">🎲</div>
+            <div class="lesson-body">
+              <span class="level-badge level-elementary" style="margin-bottom:8px;display:inline-block;">Elementary</span>
+              <h3>Sample Space</h3>
+              <p>Listing all possible outcomes of an experiment.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">📊</div>
-            <h3>Experimental Probability</h3>
-            <p>Running experiments and recording results to estimate probability.</p>
-            <a href="games.html?topic=probability&level=elementary" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#3AB0FF,#6C3FC5);">📊</div>
+            <div class="lesson-body">
+              <span class="level-badge level-elementary" style="margin-bottom:8px;display:inline-block;">Elementary</span>
+              <h3>Experimental Probability</h3>
+              <p>Running experiments and recording results to estimate probability.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">🃏</div>
-            <h3>Equally Likely Outcomes</h3>
-            <p>Fairness and equally likely events with coins and dice.</p>
-            <a href="games.html?topic=probability&level=elementary" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#3AB0FF,#6C3FC5);">🃏</div>
+            <div class="lesson-body">
+              <span class="level-badge level-elementary" style="margin-bottom:8px;display:inline-block;">Elementary</span>
+              <h3>Equally Likely Outcomes</h3>
+              <p>Fairness and equally likely events with coins and dice.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+        <div class="games-bar">
+          <h3>🎮 Practice Games — Elementary</h3>
+          <div class="games-bar-btns">
+            <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="probability" data-level="elementary">🧠 Quiz</button>
+            <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="probability" data-level="elementary">✏️ Fill in Blank</button>
+            <button class="btn btn-sm" style="background:var(--accent-blue);color:#fff;"  data-game="drag"  data-topic="probability" data-level="elementary">🎯 Match It</button>
+            <button class="btn btn-sm" style="background:var(--accent-green);color:#fff;" data-game="timed" data-topic="probability" data-level="elementary">⚡ Speed Round</button>
           </div>
         </div>
       </div>
 
       <!-- INTERMEDIATE -->
-      <div class="level-content" id="level-intermediate">
-        <h2 class="level-heading">🎓 Intermediate Probability</h2>
-        <p class="level-desc">Combined events, tree diagrams, and complementary probability.</p>
-        <div class="topic-cards">
-          <div class="topic-card">
-            <div class="card-icon">🌳</div>
-            <h3>Tree Diagrams</h3>
-            <p>Using tree diagrams to list outcomes of combined events.</p>
-            <a href="games.html?topic=probability&level=intermediate" class="btn btn-purple">Practice</a>
+      <div class="level-panel" id="panel-intermediate">
+        <div class="lessons-grid">
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#FF6B35,#FFD700);">🌳</div>
+            <div class="lesson-body">
+              <span class="level-badge level-intermediate" style="margin-bottom:8px;display:inline-block;">Intermediate</span>
+              <h3>Tree Diagrams</h3>
+              <p>Using tree diagrams to list outcomes of combined events.</p>
+              <div class="lesson-actions">
+                <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="probability" data-level="intermediate">🧠 Quiz</button>
+                <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="probability" data-level="intermediate">✏️ Fill-in</button>
+              </div>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">➕</div>
-            <h3>Addition Rule</h3>
-            <p>P(A or B) for mutually exclusive events.</p>
-            <a href="games.html?topic=probability&level=intermediate" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#FF6B35,#FFD700);">➕</div>
+            <div class="lesson-body">
+              <span class="level-badge level-intermediate" style="margin-bottom:8px;display:inline-block;">Intermediate</span>
+              <h3>Addition Rule</h3>
+              <p>P(A or B) for mutually exclusive events.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">✖️</div>
-            <h3>Multiplication Rule</h3>
-            <p>P(A and B) for independent events.</p>
-            <a href="games.html?topic=probability&level=intermediate" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#FF6B35,#FFD700);">✖️</div>
+            <div class="lesson-body">
+              <span class="level-badge level-intermediate" style="margin-bottom:8px;display:inline-block;">Intermediate</span>
+              <h3>Multiplication Rule</h3>
+              <p>P(A and B) for independent events.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">🔄</div>
-            <h3>Complementary Events</h3>
-            <p>P(not A) = 1 − P(A) and using complements.</p>
-            <a href="games.html?topic=probability&level=intermediate" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#FF6B35,#FFD700);">🔄</div>
+            <div class="lesson-body">
+              <span class="level-badge level-intermediate" style="margin-bottom:8px;display:inline-block;">Intermediate</span>
+              <h3>Complementary Events</h3>
+              <p>P(not A) = 1 − P(A) and using complements.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+        <div class="games-bar">
+          <h3>🎮 Practice Games — Intermediate</h3>
+          <div class="games-bar-btns">
+            <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="probability" data-level="intermediate">🧠 Quiz</button>
+            <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="probability" data-level="intermediate">✏️ Fill in Blank</button>
+            <button class="btn btn-sm" style="background:var(--accent-blue);color:#fff;"  data-game="drag"  data-topic="probability" data-level="intermediate">🎯 Match It</button>
+            <button class="btn btn-sm" style="background:var(--accent-green);color:#fff;" data-game="timed" data-topic="probability" data-level="intermediate">⚡ Speed Round</button>
           </div>
         </div>
       </div>
 
       <!-- ADVANCED -->
-      <div class="level-content" id="level-advanced">
-        <h2 class="level-heading">🚀 Advanced Probability</h2>
-        <p class="level-desc">Conditional probability, Bayes' theorem, permutations and combinations.</p>
-        <div class="topic-cards">
-          <div class="topic-card">
-            <div class="card-icon">🔗</div>
-            <h3>Conditional Probability</h3>
-            <p>P(A|B) — probability of A given that B has occurred.</p>
-            <a href="games.html?topic=probability&level=advanced" class="btn btn-purple">Practice</a>
+      <div class="level-panel" id="panel-advanced">
+        <div class="lessons-grid">
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#9B59B6,#FF4F9A);">🔗</div>
+            <div class="lesson-body">
+              <span class="level-badge level-advanced" style="margin-bottom:8px;display:inline-block;">Advanced</span>
+              <h3>Conditional Probability</h3>
+              <p>P(A|B) — probability of A given that B has occurred.</p>
+              <div class="lesson-actions">
+                <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="probability" data-level="advanced">🧠 Quiz</button>
+                <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="probability" data-level="advanced">✏️ Fill-in</button>
+              </div>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">📐</div>
-            <h3>Bayes' Theorem</h3>
-            <p>Updating probabilities based on new evidence.</p>
-            <a href="games.html?topic=probability&level=advanced" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#9B59B6,#FF4F9A);">📐</div>
+            <div class="lesson-body">
+              <span class="level-badge level-advanced" style="margin-bottom:8px;display:inline-block;">Advanced</span>
+              <h3>Bayes' Theorem</h3>
+              <p>Updating probabilities based on new evidence.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">🔢</div>
-            <h3>Permutations</h3>
-            <p>Counting ordered arrangements — nPr.</p>
-            <a href="games.html?topic=probability&level=advanced" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#9B59B6,#FF4F9A);">🔢</div>
+            <div class="lesson-body">
+              <span class="level-badge level-advanced" style="margin-bottom:8px;display:inline-block;">Advanced</span>
+              <h3>Permutations</h3>
+              <p>Counting ordered arrangements — nPr.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">🎯</div>
-            <h3>Combinations</h3>
-            <p>Counting unordered selections — nCr.</p>
-            <a href="games.html?topic=probability&level=advanced" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#9B59B6,#FF4F9A);">🎯</div>
+            <div class="lesson-body">
+              <span class="level-badge level-advanced" style="margin-bottom:8px;display:inline-block;">Advanced</span>
+              <h3>Combinations</h3>
+              <p>Counting unordered selections — nCr.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+        <div class="games-bar">
+          <h3>🎮 Practice Games — Advanced</h3>
+          <div class="games-bar-btns">
+            <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="probability" data-level="advanced">🧠 Quiz</button>
+            <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="probability" data-level="advanced">✏️ Fill in Blank</button>
+            <button class="btn btn-sm" style="background:var(--accent-blue);color:#fff;"  data-game="drag"  data-topic="probability" data-level="advanced">🎯 Match It</button>
+            <button class="btn btn-sm" style="background:var(--accent-green);color:#fff;" data-game="timed" data-topic="probability" data-level="advanced">⚡ Speed Round</button>
           </div>
         </div>
       </div>
 
       <!-- UNIVERSITY -->
-      <div class="level-content" id="level-university">
-        <h2 class="level-heading">🎓 University Probability</h2>
-        <p class="level-desc">Probability distributions, random variables, and stochastic processes.</p>
-        <div class="topic-cards">
-          <div class="topic-card">
-            <div class="card-icon">📈</div>
-            <h3>Random Variables</h3>
-            <p>Discrete and continuous random variables and their distributions.</p>
-            <a href="games.html?topic=probability&level=university" class="btn btn-purple">Practice</a>
+      <div class="level-panel" id="panel-university">
+        <div class="lessons-grid">
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#1A1A2E,#6C3FC5);">📈</div>
+            <div class="lesson-body">
+              <span class="level-badge level-university" style="margin-bottom:8px;display:inline-block;">University</span>
+              <h3>Random Variables</h3>
+              <p>Discrete and continuous random variables and their distributions.</p>
+              <div class="lesson-actions">
+                <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="probability" data-level="university">🧠 Quiz</button>
+                <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="probability" data-level="university">✏️ Fill-in</button>
+              </div>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">🔔</div>
-            <h3>Normal Distribution</h3>
-            <p>The bell curve, z-scores and standard normal tables.</p>
-            <a href="games.html?topic=probability&level=university" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#1A1A2E,#6C3FC5);">🔔</div>
+            <div class="lesson-body">
+              <span class="level-badge level-university" style="margin-bottom:8px;display:inline-block;">University</span>
+              <h3>Normal Distribution</h3>
+              <p>The bell curve, z-scores and standard normal tables.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">📊</div>
-            <h3>Binomial Distribution</h3>
-            <p>B(n,p) — repeated independent trials with two outcomes.</p>
-            <a href="games.html?topic=probability&level=university" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#1A1A2E,#6C3FC5);">📊</div>
+            <div class="lesson-body">
+              <span class="level-badge level-university" style="margin-bottom:8px;display:inline-block;">University</span>
+              <h3>Binomial Distribution</h3>
+              <p>B(n,p) — repeated independent trials with two outcomes.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="topic-card">
-            <div class="card-icon">♾️</div>
-            <h3>Expected Value</h3>
-            <p>E(X) — the long-run average of a random variable.</p>
-            <a href="games.html?topic=probability&level=university" class="btn btn-purple">Practice</a>
+          <div class="lesson-card">
+            <!-- VIDEO: Replace the div below with your YouTube embed -->
+            <div class="lesson-video" style="background:linear-gradient(135deg,#1A1A2E,#6C3FC5);">♾️</div>
+            <div class="lesson-body">
+              <span class="level-badge level-university" style="margin-bottom:8px;display:inline-block;">University</span>
+              <h3>Expected Value</h3>
+              <p>E(X) — the long-run average of a random variable.</p>
+              <span class="badge">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+        <div class="games-bar">
+          <h3>🎮 Practice Games — University</h3>
+          <div class="games-bar-btns">
+            <button class="btn btn-purple btn-sm" data-game="quiz"   data-topic="probability" data-level="university">🧠 Quiz</button>
+            <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="probability" data-level="university">✏️ Fill in Blank</button>
+            <button class="btn btn-sm" style="background:var(--accent-blue);color:#fff;"  data-game="drag"  data-topic="probability" data-level="university">🎯 Match It</button>
+            <button class="btn btn-sm" style="background:var(--accent-green);color:#fff;" data-game="timed" data-topic="probability" data-level="university">⚡ Speed Round</button>
           </div>
         </div>
       </div>
@@ -220,13 +353,14 @@
     </div>
   </section>
 
-  <!-- GAMES CTA -->
-  <section class="section" style="background: linear-gradient(135deg, #6C3FC5, #4a2a9e); text-align:center; padding: 60px 20px;">
-    <h2 style="color:white; margin-bottom:12px;">Ready to Practice? 🎲</h2>
-    <p style="color:rgba(255,255,255,0.85); margin-bottom:28px; font-size:18px;">Test your probability skills with interactive games!</p>
-    <a href="games.html?topic=probability" class="btn btn-orange" style="font-size:18px; padding:14px 36px;">🎮 Play Probability Games</a>
+  <!-- CTA -->
+  <section style="background:linear-gradient(135deg,#FF4F9A,#c0392b); padding:50px 24px; text-align:center;">
+    <h2 style="font-family:var(--font-head); font-size:2rem; color:white; margin-bottom:10px;">Test Your Luck — With Maths! 🎲</h2>
+    <p style="color:rgba(255,255,255,0.9); margin-bottom:24px; font-weight:600;">Practice Probability with all 4 game types at every level.</p>
+    <a href="games.html" class="btn btn-white">🎮 Go to Games →</a>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-logo">🔢 Math<span>Mystery</span>Lab</div>
     <nav class="footer-nav">
@@ -236,8 +370,8 @@
       <a href="geometry.html">Geometry</a>
       <a href="statistics.html">Statistics</a>
       <a href="probability.html">Probability</a>
-      <a href="calculus.html">Calculus</a>
       <a href="trigonometry.html">Trigonometry</a>
+      <a href="calculus.html">Calculus</a>
       <a href="number-theory.html">Number Theory</a>
       <a href="games.html">🎮 Games</a>
       <a href="dashboard.html">Dashboard</a>
@@ -254,6 +388,22 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.dropdown > a').forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const menu = this.nextElementSibling;
+        const isOpen = menu.classList.contains('open');
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
+        if (!isOpen) menu.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
+      }
+    });
+  </script>
   <script type="module">
     try {
       const { loginWithGoogle, logout, onUserChange } = await import('./firebase-config.js');
@@ -267,21 +417,12 @@
           document.getElementById('loginBtn').addEventListener('click', loginWithGoogle);
         }
       });
+      const lb = document.getElementById('loginBtn');
+      if(lb) lb.addEventListener('click', loginWithGoogle);
     } catch(e) {
-      document.getElementById('loginBtn')?.addEventListener('click', () => alert('Firebase not configured yet.'));
+      const lb = document.getElementById('loginBtn');
+      if(lb) lb.addEventListener('click', () => alert('Firebase login not yet configured.'));
     }
-  </script>
-
-  <script>
-    // Level tabs
-    document.querySelectorAll('.level-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.level-content').forEach(c => c.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById('level-' + tab.dataset.level).classList.add('active');
-      });
-    });
   </script>
 
 </body>
