@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
   <nav class="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="logo">🔢 Math<span>Mystery</span>Lab</a>
@@ -21,13 +23,13 @@
             <li><a href="algebra.html">🔣 Algebra</a></li>
             <li><a href="statistics.html">📊 Statistics</a></li>
             <li><a href="probability.html">🎲 Probability</a></li>
-            <li><a href="calculus.html">∫ Calculus</a></li>
             <li><a href="trigonometry.html">📐 Trigonometry</a></li>
+            <li><a href="calculus.html">∫ Calculus</a></li>
             <li><a href="number-theory.html">🔢 Number Theory</a></li>
           </ul>
         </li>
         <li><a href="games.html" class="btn-nav-cta">🎮 Play Games</a></li>
-        <li><a href="dashboard.html"> My Dashboard</a></li>
+        <li><a href="dashboard.html">My Dashboard</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -39,6 +41,8 @@
       </button>
     </div>
   </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
   <header class="hero">
     <div class="hero-emoji">🔬🧮✨</div>
     <h1>Welcome to Math Mystery Lab!</h1>
@@ -49,17 +53,42 @@
     </div>
   </header>
 
-    <section class="section" id="topics">
+  <!-- ═══════════ STATS BAR ═══════════ -->
+  <section style="background:var(--white); border-bottom:1px solid #f0e8ff; padding:20px 24px;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:center; gap:40px; flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div style="font-family:var(--font-head); font-size:2rem; color:var(--primary);">8</div>
+        <div style="font-size:.8rem; font-weight:700; color:var(--text-mid);">Topics</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:var(--font-head); font-size:2rem; color:var(--secondary);">5</div>
+        <div style="font-size:.8rem; font-weight:700; color:var(--text-mid);">Levels</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:var(--font-head); font-size:2rem; color:var(--accent-green);">500+</div>
+        <div style="font-size:.8rem; font-weight:700; color:var(--text-mid);">Questions</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:var(--font-head); font-size:2rem; color:var(--accent-pink);">4</div>
+        <div style="font-size:.8rem; font-weight:700; color:var(--text-mid);">Game Types</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:var(--font-head); font-size:2rem; color:var(--yellow);">100%</div>
+        <div style="font-size:.8rem; font-weight:700; color:var(--text-mid);">Free</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TOPICS ═══════════ -->
+  <section class="section" id="topics">
     <div class="section-inner">
-      <h2 class="section-title">Choose Your Topic</h2>
+      <h2 class="section-title">Choose Your <span>Topic</span></h2>
       <p class="section-subtitle">From counting to calculus — pick your subject and start exploring!</p>
 
       <div class="topic-grid-new">
 
         <a href="arithmetic.html" class="topic-card-new" style="background: linear-gradient(135deg, #FF6B35, #FF9A3C);">
-          <div class="topic-card-symbol" style="font-size:28px; line-height:1.5;">
-  ➕ ➖<br>✖️ ➗
-</div>
+          <div class="topic-card-symbol ops">➕ ➖<br>✖️ ➗</div>
           <div class="topic-card-info">
             <h3>Arithmetic</h3>
             <p>Numbers, operations, fractions and more.</p>
@@ -77,9 +106,7 @@
         </a>
 
         <a href="algebra.html" class="topic-card-new" style="background: linear-gradient(135deg, #6C3FC5, #9B59B6);">
-          <div class="topic-card-symbol" style="font-size:52px; font-style:italic; font-weight:900;">
-  x²
-</div>
+          <div class="topic-card-symbol" style="font-size:48px; font-style:italic; font-weight:900; font-family:Georgia, serif;">x²</div>
           <div class="topic-card-info">
             <h3>Algebra</h3>
             <p>Equations, variables and patterns.</p>
@@ -105,8 +132,8 @@
           </div>
         </a>
 
-        <a href="trigonometry.html" class="topic-card-new" style="background: linear-gradient(135deg, #FF6B35, #e74c3c);">
-          <div class="topic-card-symbol">📏</div>
+        <a href="trigonometry.html" class="topic-card-new" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+          <div class="topic-card-symbol" style="font-size:36px; font-weight:900; font-family:Georgia,serif; letter-spacing:-1px;">sin cos<br><span style="font-size:28px;">tan</span></div>
           <div class="topic-card-info">
             <h3>Trigonometry</h3>
             <p>Sin, cos, tan and triangle ratios.</p>
@@ -114,8 +141,8 @@
           </div>
         </a>
 
-        <a href="calculus.html" class="topic-card-new" style="background: linear-gradient(135deg, #FFD700, #FF9A3C);">
-          <div class="topic-card-symbol">∫</div>
+        <a href="calculus.html" class="topic-card-new" style="background: linear-gradient(135deg, #e6a817, #FF9A3C);">
+          <div class="topic-card-symbol" style="font-size:64px; font-family:Georgia,serif; line-height:0.9;">∫</div>
           <div class="topic-card-info">
             <h3>Calculus</h3>
             <p>Limits, derivatives and integrals.</p>
@@ -123,8 +150,8 @@
           </div>
         </a>
 
-        <a href="number-theory.html" class="topic-card-new" style="background: linear-gradient(135deg, #9B59B6, #FF4F9A);">
-          <div class="topic-card-symbol">🔢</div>
+        <a href="number-theory.html" class="topic-card-new" style="background: linear-gradient(135deg, #9B59B6, #6C3FC5);">
+          <div class="topic-card-symbol" style="font-size:38px; font-weight:900; line-height:1.3;">p q r<br><span style="font-size:28px;">primes</span></div>
           <div class="topic-card-info">
             <h3>Number Theory</h3>
             <p>Primes, GCD, LCM and modular math.</p>
@@ -136,44 +163,130 @@
     </div>
   </section>
 
+  <!-- ═══════════ GAMES ═══════════ -->
   <section class="section section-alt">
     <div class="section-inner">
       <h2 class="section-title">🎮 Practice <span>Games</span></h2>
-      <p style="text-align:center;color:var(--text-mid);max-width:540px;margin:0 auto 32px;">Reinforce learning with interactive games — quizzes, fill-in-the-blank, drag &amp; drop, and speed rounds!</p>
+      <p style="text-align:center;color:var(--text-mid);max-width:540px;margin:0 auto 32px;">
+        Reinforce learning with interactive games — quizzes, fill-in-the-blank, drag &amp; drop, and speed rounds!
+      </p>
       <div class="games-grid">
-        <div class="game-card game-quiz"><div class="game-icon">🧠</div><h3>Quiz Challenge</h3><p>Multiple choice across all topics and levels.</p><button class="btn btn-purple btn-sm" data-game="quiz" data-topic="arithmetic" data-level="beginner">Try a Quiz</button></div>
-        <div class="game-card game-fillin"><div class="game-icon">✏️</div><h3>Fill in the Blank</h3><p>Type the missing number or answer to complete equations.</p><button class="btn btn-orange btn-sm" data-game="fillin" data-topic="arithmetic" data-level="beginner">Try Fill-in</button></div>
-        <div class="game-card game-drag"><div class="game-icon">🎯</div><h3>Match It!</h3><p>Drag and drop to match pairs — values, definitions and more.</p><button class="btn btn-sm" style="background:var(--accent-blue);color:#fff;" data-game="drag" data-topic="arithmetic" data-level="beginner">Try Matching</button></div>
-        <div class="game-card game-timed"><div class="game-icon">⚡</div><h3>Speed Round</h3><p>Answer as many as you can before the timer runs out!</p><button class="btn btn-sm" style="background:var(--accent-green);color:#fff;" data-game="timed" data-topic="arithmetic" data-level="beginner">Try Speed Round</button></div>
+        <div class="game-card game-quiz">
+          <div class="game-icon">🧠</div>
+          <h3>Quiz Challenge</h3>
+          <p>Multiple choice across all topics and levels.</p>
+          <button class="btn btn-purple btn-sm" data-game="quiz" data-topic="arithmetic" data-level="beginner">Try a Quiz</button>
+        </div>
+        <div class="game-card game-fillin">
+          <div class="game-icon">✏️</div>
+          <h3>Fill in the Blank</h3>
+          <p>Type the missing number or answer to complete equations.</p>
+          <button class="btn btn-orange btn-sm" data-game="fillin" data-topic="arithmetic" data-level="beginner">Try Fill-in</button>
+        </div>
+        <div class="game-card game-drag">
+          <div class="game-icon">🎯</div>
+          <h3>Match It!</h3>
+          <p>Drag and drop to match pairs — values, definitions and more.</p>
+          <button class="btn btn-sm" style="background:var(--accent-blue);color:#fff;" data-game="drag" data-topic="arithmetic" data-level="beginner">Try Matching</button>
+        </div>
+        <div class="game-card game-timed">
+          <div class="game-icon">⚡</div>
+          <h3>Speed Round</h3>
+          <p>Answer as many as you can before the timer runs out!</p>
+          <button class="btn btn-sm" style="background:var(--accent-green);color:#fff;" data-game="timed" data-topic="arithmetic" data-level="beginner">Try Speed Round</button>
+        </div>
       </div>
-      <div style="text-align:center;margin-top:28px;"><a href="games.html" class="btn btn-orange">See All Games →</a></div>
+      <div style="text-align:center;margin-top:28px;">
+        <a href="games.html" class="btn btn-orange">See All Games →</a>
+      </div>
     </div>
   </section>
 
+  <!-- ═══════════ LEVELS ═══════════ -->
   <section class="section">
     <div class="section-inner">
       <h2 class="section-title">Learn at <span>Your Level</span></h2>
+      <p class="section-subtitle" style="margin-bottom:28px;">Every topic has 5 levels — start anywhere, go at your own pace!</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;">
-        <div style="background:#e8f5e9;border-radius:var(--radius);padding:18px;text-align:center;"><div style="font-size:1.8rem;margin-bottom:8px;">🌱</div><span class="level-badge level-beginner" style="font-size:.82rem;padding:4px 12px;">Beginner</span><p style="font-size:.8rem;color:var(--text-mid);margin-top:8px;">Counting, basic addition, simple shapes</p></div>
-        <div style="background:#e3f2fd;border-radius:var(--radius);padding:18px;text-align:center;"><div style="font-size:1.8rem;margin-bottom:8px;">📚</div><span class="level-badge level-elementary" style="font-size:.82rem;padding:4px 12px;">Elementary</span><p style="font-size:.8rem;color:var(--text-mid);margin-top:8px;">Multiplication, fractions, geometry basics</p></div>
-        <div style="background:#fff3e0;border-radius:var(--radius);padding:18px;text-align:center;"><div style="font-size:1.8rem;margin-bottom:8px;">🎓</div><span class="level-badge level-intermediate" style="font-size:.82rem;padding:4px 12px;">Intermediate</span><p style="font-size:.8rem;color:var(--text-mid);margin-top:8px;">Algebra, percentages, trig basics</p></div>
-        <div style="background:#f3e5f5;border-radius:var(--radius);padding:18px;text-align:center;"><div style="font-size:1.8rem;margin-bottom:8px;">🚀</div><span class="level-badge level-advanced" style="font-size:.82rem;padding:4px 12px;">Advanced</span><p style="font-size:.8rem;color:var(--text-mid);margin-top:8px;">Logarithms, advanced algebra, statistics</p></div>
-        <div style="background:#212121;border-radius:var(--radius);padding:18px;text-align:center;"><div style="font-size:1.8rem;margin-bottom:8px;">🎓</div><span class="level-badge" style="font-size:.82rem;padding:4px 12px;background:#6C3FC5;">University</span><p style="font-size:.8rem;color:rgba(255,255,255,.65);margin-top:8px;">Calculus, real analysis, number theory</p></div>
+        <div style="background:#e8f5e9;border-radius:var(--radius);padding:18px;text-align:center;">
+          <div style="font-size:1.8rem;margin-bottom:8px;">🌱</div>
+          <span class="level-badge level-beginner" style="font-size:.82rem;padding:4px 12px;">Beginner</span>
+          <p style="font-size:.8rem;color:var(--text-mid);margin-top:8px;">Counting, basic addition, simple shapes</p>
+        </div>
+        <div style="background:#e3f2fd;border-radius:var(--radius);padding:18px;text-align:center;">
+          <div style="font-size:1.8rem;margin-bottom:8px;">📚</div>
+          <span class="level-badge level-elementary" style="font-size:.82rem;padding:4px 12px;">Elementary</span>
+          <p style="font-size:.8rem;color:var(--text-mid);margin-top:8px;">Multiplication, fractions, geometry basics</p>
+        </div>
+        <div style="background:#fff3e0;border-radius:var(--radius);padding:18px;text-align:center;">
+          <div style="font-size:1.8rem;margin-bottom:8px;">🎓</div>
+          <span class="level-badge level-intermediate" style="font-size:.82rem;padding:4px 12px;">Intermediate</span>
+          <p style="font-size:.8rem;color:var(--text-mid);margin-top:8px;">Algebra, percentages, trig basics</p>
+        </div>
+        <div style="background:#f3e5f5;border-radius:var(--radius);padding:18px;text-align:center;">
+          <div style="font-size:1.8rem;margin-bottom:8px;">🚀</div>
+          <span class="level-badge level-advanced" style="font-size:.82rem;padding:4px 12px;">Advanced</span>
+          <p style="font-size:.8rem;color:var(--text-mid);margin-top:8px;">Logarithms, advanced algebra, statistics</p>
+        </div>
+        <div style="background:#1a1a2e;border-radius:var(--radius);padding:18px;text-align:center;">
+          <div style="font-size:1.8rem;margin-bottom:8px;">🎓</div>
+          <span class="level-badge" style="font-size:.82rem;padding:4px 12px;background:#6C3FC5;">University</span>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.65);margin-top:8px;">Calculus, real analysis, number theory</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ═══════════ VIDEOS ═══════════ -->
   <section class="section section-alt">
     <div class="section-inner">
       <h2 class="section-title">Latest <span>Videos</span></h2>
+      <p class="section-subtitle" style="margin-bottom:32px;">New math lessons dropping soon — subscribe so you don't miss them!</p>
+
       <div class="lessons-grid">
-        <div class="lesson-card"><div class="lesson-video" style="background:linear-gradient(135deg,var(--primary),var(--accent-blue));">▶️</div><div class="lesson-body"><h3>Videos Coming Soon!</h3><p>Subscribe below to be first to know when new lessons drop!</p></div></div>
-        <div class="lesson-card"><div class="lesson-video" style="background:linear-gradient(135deg,var(--secondary),var(--yellow));">▶️</div><div class="lesson-body"><h3>New Videos Every Week</h3><p>Fun lessons from basic addition all the way to university calculus.</p></div></div>
-        <div class="lesson-card"><div class="lesson-video" style="background:linear-gradient(135deg,var(--accent-green),var(--accent-blue));">▶️</div><div class="lesson-body"><h3>Subscribe on YouTube</h3><p><a href="https://youtube.com/@MathMystery_Lab" target="_blank" style="color:var(--primary);font-weight:800;">@MathMystery_Lab →</a></p></div></div>
+        <div class="lesson-card">
+          <div class="lesson-video" style="background:linear-gradient(135deg,var(--primary),var(--accent-blue));">▶️</div>
+          <div class="lesson-body">
+            <h3>Videos Coming Soon!</h3>
+            <p>We're creating fun animated lessons for every topic. Subscribe to be the first to know!</p>
+            <a href="https://youtube.com/@MathMystery_Lab" target="_blank" class="btn btn-purple btn-sm">Subscribe on YouTube</a>
+          </div>
+        </div>
+        <div class="lesson-card">
+          <div class="lesson-video" style="background:linear-gradient(135deg,var(--secondary),var(--yellow));">🎬</div>
+          <div class="lesson-body">
+            <h3>Beginner to University</h3>
+            <p>Lessons covering all 8 topics across 5 levels — something for every learner.</p>
+            <a href="arithmetic.html" class="btn btn-orange btn-sm">Start Learning →</a>
+          </div>
+        </div>
+        <div class="lesson-card">
+          <div class="lesson-video" style="background:linear-gradient(135deg,var(--accent-green),var(--accent-blue));">🎮</div>
+          <div class="lesson-body">
+            <h3>Practice While You Wait</h3>
+            <p>Games are live now! Quiz, fill-in, match and speed rounds — all free, all topics.</p>
+            <a href="games.html" class="btn btn-sm" style="background:var(--accent-green);color:white;">Play Games Now →</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ═══════════ CTA BANNER ═══════════ -->
+  <section style="background:linear-gradient(135deg,var(--primary),#9B59B6); padding:60px 24px; text-align:center;">
+    <h2 style="font-family:var(--font-head); font-size:clamp(1.8rem,4vw,2.8rem); color:white; margin-bottom:12px;">
+      Ready to Make Maths Fun? 🚀
+    </h2>
+    <p style="color:rgba(255,255,255,0.88); font-size:1.1rem; max-width:520px; margin:0 auto 28px; font-weight:600;">
+      Sign in free with Google to track your progress, earn XP and unlock badges!
+    </p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="games.html" class="btn btn-orange">🎮 Start Playing</a>
+      <a href="arithmetic.html" class="btn btn-white">📚 Browse Topics</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
   <footer>
     <div class="footer-logo">🔢 Math<span>Mystery</span>Lab</div>
     <nav class="footer-nav">
@@ -183,8 +296,8 @@
       <a href="geometry.html">Geometry</a>
       <a href="statistics.html">Statistics</a>
       <a href="probability.html">Probability</a>
-      <a href="calculus.html">Calculus</a>
       <a href="trigonometry.html">Trigonometry</a>
+      <a href="calculus.html">Calculus</a>
       <a href="number-theory.html">Number Theory</a>
       <a href="games.html">🎮 Games</a>
       <a href="dashboard.html">Dashboard</a>
@@ -199,6 +312,7 @@
     </div>
     <p class="footer-copy">© 2025 Math Mystery Lab. All rights reserved.</p>
   </footer>
+
   <script src="script.js"></script>
   <script type="module">
     try {
@@ -217,8 +331,9 @@
       if(lb) lb.addEventListener('click', loginWithGoogle);
     } catch(e) {
       const lb = document.getElementById('loginBtn');
-      if(lb) lb.addEventListener('click', ()=> alert('Firebase login not yet configured. See firebase-config.js for instructions.'));
+      if(lb) lb.addEventListener('click', () => alert('Firebase login not yet configured.'));
     }
   </script>
+
 </body>
 </html>
