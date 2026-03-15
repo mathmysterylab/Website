@@ -314,6 +314,25 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Click-based dropdown
+    document.querySelectorAll('.dropdown > a').forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const menu = this.nextElementSibling;
+        const isOpen = menu.classList.contains('open');
+        // Close all dropdowns first
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
+        if (!isOpen) menu.classList.add('open');
+      });
+    });
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
+      }
+    });
+  </script>
   <script type="module">
     try {
       const { loginWithGoogle, logout, onUserChange } = await import('./firebase-config.js');
