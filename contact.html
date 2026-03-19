@@ -9,6 +9,7 @@
 </head>
 <body>
 
+  <!-- ═══════════ NAVBAR ═══════════ -->
   <nav class="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="logo">🔢 Math<span>Mystery</span>Lab</a>
@@ -21,8 +22,9 @@
             <li><a href="geometry.html">📐 Geometry</a></li>
             <li><a href="algebra.html">🔣 Algebra</a></li>
             <li><a href="statistics.html">📊 Statistics</a></li>
-            <li><a href="calculus.html">∫ Calculus</a></li>
+            <li><a href="probability.html">🎲 Probability</a></li>
             <li><a href="trigonometry.html">📐 Trigonometry</a></li>
+            <li><a href="calculus.html">∫ Calculus</a></li>
             <li><a href="number-theory.html">🔢 Number Theory</a></li>
           </ul>
         </li>
@@ -40,11 +42,13 @@
     </div>
   </nav>
 
-  <header class="page-header"  style="background: linear-gradient(135deg, #6C3FC5 0%, #4a2a9e 100%); padding: 80px 20px;">
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header class="page-header" style="background: linear-gradient(135deg, #6C3FC5 0%, #4a2a9e 100%); padding: 80px 20px;">
     <h1>📬 Contact Us</h1>
     <p>Questions, feedback, or ideas? We'd love to hear from you!</p>
   </header>
 
+  <!-- ═══════════ CONTENT ═══════════ -->
   <section class="section">
     <div class="section-inner">
       <div class="contact-grid">
@@ -70,34 +74,48 @@
             <div><strong>TikTok</strong><p><a href="https://tiktok.com/@mathmysterylab" target="_blank" style="color:var(--primary);">@mathmysterylab</a></p></div>
           </div>
 
-          <div style="margin-top:28px;padding:20px;background:var(--bg);border-radius:var(--radius);border-left:4px solid var(--primary);">
+          <div style="margin-top:28px; padding:20px; background:var(--bg); border-radius:var(--radius); border-left:4px solid var(--primary);">
             <strong>💡 Tip:</strong> For the fastest reply, message us on social media — we check those regularly!
           </div>
         </div>
-        
-        <div class="contact-form" style="text-align:center; padding: 60px 40px;">
-          <h2 style="color: #6C3FC5; margin-bottom: 20px;">Send Us a Message</h2>
-          <p style="font-size: 18px; color: #444; margin-bottom: 30px;">
+
+        <div class="contact-form" style="text-align:center; padding:60px 40px;">
+          <h2 style="color:#6C3FC5; margin-bottom:20px;">Send Us a Message</h2>
+          <p style="font-size:1.05rem; color:#444; margin-bottom:30px;">
             Have a question or suggestion? We'd love to hear from you!
           </p>
           <a href="mailto:info@mathmysterylab.org"
              style="background:#FF6B35; color:white; padding:16px 40px;
-                    border-radius:50px; font-size:18px; font-weight:bold;
+                    border-radius:50px; font-size:1.05rem; font-weight:800;
                     text-decoration:none; display:inline-block;">
             ✉️ Email Us
           </a>
+          <p style="margin-top:20px; font-size:.85rem; color:var(--text-mid);">
+            info@mathmysterylab.org
+          </p>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- ═══════════ FOOTER ═══════════ -->
   <footer>
     <div class="footer-logo">🔢 Math<span>Mystery</span>Lab</div>
     <nav class="footer-nav">
-      <a href="index.html">Home</a><a href="arithmetic.html">Arithmetic</a><a href="algebra.html">Algebra</a>
-      <a href="games.html">Games</a><a href="dashboard.html">Dashboard</a>
-      <a href="about.html">About</a><a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="arithmetic.html">Arithmetic</a>
+      <a href="algebra.html">Algebra</a>
+      <a href="geometry.html">Geometry</a>
+      <a href="statistics.html">Statistics</a>
+      <a href="probability.html">Probability</a>
+      <a href="trigonometry.html">Trigonometry</a>
+      <a href="calculus.html">Calculus</a>
+      <a href="number-theory.html">Number Theory</a>
+      <a href="games.html">🎮 Games</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="social-links">
       <a href="https://youtube.com/@MathMystery_Lab" target="_blank">▶ YouTube</a>
@@ -109,6 +127,22 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.dropdown > a').forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const menu = this.nextElementSibling;
+        const isOpen = menu.classList.contains('open');
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
+        if (!isOpen) menu.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
+      }
+    });
+  </script>
   <script type="module">
     try {
       const { loginWithGoogle, logout, onUserChange } = await import('./firebase-config.js');
@@ -122,9 +156,13 @@
           document.getElementById('loginBtn').addEventListener('click', loginWithGoogle);
         }
       });
+      const lb = document.getElementById('loginBtn');
+      if(lb) lb.addEventListener('click', loginWithGoogle);
     } catch(e) {
-      document.getElementById('loginBtn')?.addEventListener('click', () => alert('Firebase not configured yet.'));
+      const lb = document.getElementById('loginBtn');
+      if(lb) lb.addEventListener('click', () => alert('Firebase login not yet configured.'));
     }
   </script>
+
 </body>
 </html>
